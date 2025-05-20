@@ -31,11 +31,15 @@ function gameBoard() {
                 (boardStatus[2] === boardStatus[4] &&
                 boardStatus[2] === boardStatus[6] && boardStatus[2])) {
                     alert(`${turnTracker} is the winner!`);
+                } else if (boardStatus[0] && boardStatus[1] && boardStatus[2] &&
+                    boardStatus[3] && boardStatus[4] && boardStatus[5] &&
+                    boardStatus[6] && boardStatus[7] && boardStatus[8]) {
+                    alert("The board is full. Tie game!");
                 } else if (turnTracker === "X") {
-                turnTracker = "O";
-            } else {
-                turnTracker = "X";
-            }
+                    turnTracker = "O";
+                } else {
+                    turnTracker = "X";
+                }
         }
     }
     return { boardStatus, boardUpdate };
