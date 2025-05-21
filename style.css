@@ -48,3 +48,8 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+.big-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 5fr 0.5fr;
+    justify-content: center;
+}
