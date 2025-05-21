@@ -48,6 +48,12 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+:root {
+    --color1: blue;
+    --color2: yellow;
+    --color3: red;
+}
+
 .big-container {
     display: grid;
     grid-template-rows: 1fr 1fr 5fr 1fr 0.5fr;
@@ -77,5 +83,13 @@ h1, h2, h3, h4, h5, h6 {
 
 button {
     appearance: none;
+    border: solid black 1px;
+    border-radius: 15px;
+    background-color: var(--color2);
+    padding: 0.5rem 1rem;
+}
+
+button:active {
+    background-color: var(--color3);
 }
 
