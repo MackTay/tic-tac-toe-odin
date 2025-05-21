@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .big-container {
     display: grid;
-    grid-template-rows: 1fr 1fr 5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr 0.5fr;
     justify-content: center;
 }
 
@@ -66,5 +66,16 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     width: 100px;
     height: 100px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    appearance: none;
 }
 
