@@ -55,15 +55,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tiles-container {
-    margin: 5rem;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .tile {
     border: solid 1px black;
     text-align: center;
-    padding: 2rem;
+    width: 100px;
+    height: 100px;
 }
 
