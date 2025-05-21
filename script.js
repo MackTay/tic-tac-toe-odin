@@ -97,23 +97,32 @@ let game = gamePieces.gameBoard();
 let p1 = gamePieces.player1Creator();
 let p2 = gamePieces.player2Creator();
 
-let tile0 = document.getElementById(tile0);
-let tile1 = document.getElementById(tile1);
-let tile2 = document.getElementById(tile2);
-let tile3 = document.getElementById(tile3);
-let tile4 = document.getElementById(tile4);
-let tile5 = document.getElementById(tile5);
-let tile6 = document.getElementById(tile6);
-let tile7 = document.getElementById(tile7);
-let tile8 = document.getElementById(tile8);
+const tile0 = document.getElementById(tile0);
+const tile1 = document.getElementById(tile1);
+const tile2 = document.getElementById(tile2);
+const tile3 = document.getElementById(tile3);
+const tile4 = document.getElementById(tile4);
+const tile5 = document.getElementById(tile5);
+const tile6 = document.getElementById(tile6);
+const tile7 = document.getElementById(tile7);
+const tile8 = document.getElementById(tile8);
 
 const display = {
-    tileDisplay: function() {
-
-        // insert function that updates tile display to match boardStatus
+// function that updates tile display to match boardStatus
+    displayUpdate: function() {
+        tile0.textContent = game.boardStatus[0];
+        tile1.textContent = game.boardStatus[1];
+        tile2.textContent = game.boardStatus[2];
+        tile3.textContent = game.boardStatus[3];
+        tile4.textContent = game.boardStatus[4];
+        tile5.textContent = game.boardStatus[5];
+        tile6.textContent = game.boardStatus[6];
+        tile7.textContent = game.boardStatus[7];
+        tile8.textContent = game.boardStatus[8];
     },
+// function that updates scoreboard after a win or draw
     scoreDisplay: function() {
-        // insert function that updates scoreboard after a win or draw
+        
     }
 }
 
