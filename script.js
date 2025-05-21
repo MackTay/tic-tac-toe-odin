@@ -97,15 +97,18 @@ let game = gamePieces.gameBoard();
 let p1 = gamePieces.player1Creator();
 let p2 = gamePieces.player2Creator();
 
-const tile0 = document.getElementById(tile0);
-const tile1 = document.getElementById(tile1);
-const tile2 = document.getElementById(tile2);
-const tile3 = document.getElementById(tile3);
-const tile4 = document.getElementById(tile4);
-const tile5 = document.getElementById(tile5);
-const tile6 = document.getElementById(tile6);
-const tile7 = document.getElementById(tile7);
-const tile8 = document.getElementById(tile8);
+const tile0 = document.getElementById("tile0");
+const tile1 = document.getElementById("tile1");
+const tile2 = document.getElementById("tile2");
+const tile3 = document.getElementById("tile3");
+const tile4 = document.getElementById("tile4");
+const tile5 = document.getElementById("tile5");
+const tile6 = document.getElementById("tile6");
+const tile7 = document.getElementById("tile7");
+const tile8 = document.getElementById("tile8");
+
+const p1Score = document.getElementById("p1-score");
+const p2Score = document.getElementById("p2-score");
 
 const display = {
 // function that updates tile display to match boardStatus
@@ -121,8 +124,9 @@ const display = {
         tile8.textContent = game.boardStatus[8];
     },
 // function that updates scoreboard after a win or draw
-    scoreDisplay: function() {
-        
+    scoreUpdate: function() {
+        p1Score.textContent = p1.getWins;
+        p2Score.textContent = p2.getWins;
     }
 }
 
