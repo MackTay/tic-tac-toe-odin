@@ -93,62 +93,28 @@ const gamePieces = (function() {
     return { gameBoard, player1Creator, player2Creator, gameController };
 })();
 
+let game = gamePieces.gameBoard();
+let p1 = gamePieces.player1Creator();
+let p2 = gamePieces.player2Creator();
 
-/* funtion starts game and creates data for a board in array
-Visual grid will be board[0-2] up top, board[3-5] in middle, and board[6-8] on bottom */
+let tile0 = document.getElementById(tile0);
+let tile1 = document.getElementById(tile1);
+let tile2 = document.getElementById(tile2);
+let tile3 = document.getElementById(tile3);
+let tile4 = document.getElementById(tile4);
+let tile5 = document.getElementById(tile5);
+let tile6 = document.getElementById(tile6);
+let tile7 = document.getElementById(tile7);
+let tile8 = document.getElementById(tile8);
 
-// function gameBoard() {
-//     const boardStatus = [ "", "", "", "", "", "", "", "", "" ];
-//     let turnTracker = "X";
-//     const boardUpdate = function(tile) {
-//         if (isNaN(tile)) {
-//             return "Not a number!";
-//         } else if (boardStatus[tile]) {
-//             return "Already full!"
-//         } else {
-//             boardStatus[tile] = turnTracker;
-//             if (
-//                 (boardStatus[0] === boardStatus[1] &&
-//                 boardStatus[0] === boardStatus[2] && boardStatus[0]) ||
-//                 (boardStatus[3] === boardStatus[4] &&
-//                 boardStatus[3] === boardStatus[5] && boardStatus[3]) ||
-//                 (boardStatus[6] === boardStatus[7] &&
-//                 boardStatus[6] === boardStatus[8] && boardStatus[6]) ||
-//                 (boardStatus[0] === boardStatus[3] &&
-//                 boardStatus[0] === boardStatus[6] && boardStatus[0]) ||
-//                 (boardStatus[1] === boardStatus[4] &&
-//                 boardStatus[1] === boardStatus[7] && boardStatus[1]) ||
-//                 (boardStatus[2] === boardStatus[5] &&
-//                 boardStatus[2] === boardStatus[8] && boardStatus[2]) ||
-//                 (boardStatus[0] === boardStatus[4] &&
-//                 boardStatus[0] === boardStatus[8] && boardStatus[0]) ||
-//                 (boardStatus[2] === boardStatus[4] &&
-//                 boardStatus[2] === boardStatus[6] && boardStatus[2])) {
-//                     alert(`${turnTracker} is the winner!`);
-//                 } else if (boardStatus[0] && boardStatus[1] && boardStatus[2] &&
-//                     boardStatus[3] && boardStatus[4] && boardStatus[5] &&
-//                     boardStatus[6] && boardStatus[7] && boardStatus[8]) {
-//                     alert("The board is full. Tie game!");
-//                 } else if (turnTracker === "X") {
-//                     turnTracker = "O";
-//                 } else {
-//                     turnTracker = "X";
-//                 }
-//         }
-//     }
-//     return { boardStatus, boardUpdate };
-// }
+const display = {
+    tileDisplay: function() {
 
-/* Add a FF that creates 2 player objects. Each object should keep track of number of wins and whether it's their turn to be X or not */
-
-// function createPlayers() {
-//     const player1 = { wins: 0, startingTurn: true };
-//     const player2 = { wins: 0, startingTurn: false };
-//     return { player1, player2 };
-// }
-
-/* Add a FF that creates a tra */
-
-
+        // insert function that updates tile display to match boardStatus
+    },
+    scoreDisplay: function() {
+        // insert function that updates scoreboard after a win or draw
+    }
+}
 
 
