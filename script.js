@@ -125,9 +125,53 @@ const display = {
     },
 // function that updates scoreboard after a win or draw
     scoreUpdate: function() {
-        p1Score.textContent = p1.getWins;
-        p2Score.textContent = p2.getWins;
+        p1Score.textContent = p1.getWins();
+        p2Score.textContent = p2.getWins();
     }
 }
 
+// Event listener for gameboard
 
+const gameDisplay = document.getElementById("tiles");
+
+gameDisplay.addEventListener("click", (event) => {
+    switch (event.target.id) {
+        case "tile0":
+            gamePieces.gameController(game, 0, p1, p2);
+            break;
+
+        case "tile1":
+            gamePieces.gameController(game, 1, p1, p2);
+            break;
+
+        case "tile2":
+            gamePieces.gameController(game, 2, p1, p2);
+            break;
+
+        case "tile3":
+            gamePieces.gameController(game, 3, p1, p2);
+            break;
+
+        case "tile4":
+            gamePieces.gameController(game, 4, p1, p2);
+            break;
+
+        case "tile5":
+            gamePieces.gameController(game, 5, p1, p2);
+            break;
+
+        case "tile6":
+            gamePieces.gameController(game, 6, p1, p2);
+            break;
+
+        case "tile7":
+            gamePieces.gameController(game, 7, p1, p2);
+            break;
+
+        case "tile8":
+            gamePieces.gameController(game, 8, p1, p2);
+            break;
+    }
+    display.displayUpdate();
+    display.scoreUpdate();
+})
