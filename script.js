@@ -80,12 +80,14 @@ const gamePieces = (function() {
                     }
                     p1.markerUpdater();
                     p2.markerUpdater();
+                    game = gamePieces.gameBoard();
                 } else if (board.boardStatus[0] && board.boardStatus[1] && board.boardStatus[2] &&
                     board.boardStatus[3] && board.boardStatus[4] && board.boardStatus[5] &&
                     board.boardStatus[6] && board.boardStatus[7] && board.boardStatus[8]) {
                     alert("The board is full. Tie game!");
                     p1.markerUpdater();
                     p2.markerUpdater();
+                    game = gamePieces.gameBoard();
                 }
             board.markerUpdater();
         }
@@ -174,4 +176,11 @@ gameDisplay.addEventListener("click", (event) => {
     }
     display.displayUpdate();
     display.scoreUpdate();
+})
+
+const dialog = document.querySelector("dialog");
+const startBtn = document.getElementById("begin-btn");
+
+startBtn.addEventListener('click', () => {
+    dialog.showModal();
 })
