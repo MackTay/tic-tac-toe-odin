@@ -203,4 +203,13 @@ submit.addEventListener("click", (event) => {
     p1Display.textContent = p1.name + "'s score: ";
     p2Display.textContent = p2.name + "'s score: ";
     dialog.close();
-}) // to be continued...
+});
+
+const reset = document.getElementById("reset");
+
+reset.addEventListener("click", () => {
+    p1.winsReseter();
+    p2.winsReseter();
+    display.displayUpdate();
+    display.scoreUpdate();
+});
