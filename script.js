@@ -30,7 +30,8 @@ const gamePieces = (function() {
         }
         const getWins = () => wins;
         const winsUpdater = () => wins++;
-        return { name, getMarker, markerUpdater, getWins, winsUpdater };
+        const winsReseter = () => wins = 0;
+        return { name, getMarker, markerUpdater, getWins, winsUpdater, winsReseter };
     }
     const player2Creator = function() {
         let name = "Player 2";
@@ -46,7 +47,8 @@ const gamePieces = (function() {
         }
         const getWins = () => wins;
         const winsUpdater = () => wins++;
-        return { name, getMarker, markerUpdater, getWins, winsUpdater };
+        const winsReseter = () => wins = 0;
+        return { name, getMarker, markerUpdater, getWins, winsUpdater, winsReseter };
     }
 /* the function below will take the board object, NOT board.boardStatus, so that's why we need to use board.boardStatus below */
 
