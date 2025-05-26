@@ -17,6 +17,7 @@ const gamePieces = (function() {
         return { boardStatus, getMarker, markerUpdater }
     }
     const player1Creator = function() {
+        let name = "Player 1";
         let wins = 0;
         let marker = "X";
         const getMarker = () => marker;
@@ -29,9 +30,10 @@ const gamePieces = (function() {
         }
         const getWins = () => wins;
         const winsUpdater = () => wins++;
-        return { getMarker, markerUpdater, getWins, winsUpdater };
+        return { name, getMarker, markerUpdater, getWins, winsUpdater };
     }
     const player2Creator = function() {
+        let name = "Player 2";
         let wins = 0;
         let marker = "O";
         const getMarker = () => marker;
@@ -44,7 +46,7 @@ const gamePieces = (function() {
         }
         const getWins = () => wins;
         const winsUpdater = () => wins++;
-        return { getMarker, markerUpdater, getWins, winsUpdater };
+        return { name, getMarker, markerUpdater, getWins, winsUpdater };
     }
 /* the function below will take the board object, NOT board.boardStatus, so that's why we need to use board.boardStatus below */
 
@@ -95,7 +97,7 @@ const gamePieces = (function() {
     return { gameBoard, player1Creator, player2Creator, gameController };
 })();
 
-let game = gamePieces.gameBoard();
+let game;
 let p1 = gamePieces.player1Creator();
 let p2 = gamePieces.player2Creator();
 
@@ -184,3 +186,19 @@ const startBtn = document.getElementById("begin-btn");
 startBtn.addEventListener('click', () => {
     dialog.showModal();
 })
+
+const submit = document.querySelector("dialog > button");
+const p1Name = document.getElementById("p1-name");
+const p2Name = document.getElementById("p2-name");
+const p1Display = document.getElementById("p1-display");
+const p2Display = document.getElementById("p2-display");
+
+submit.addEventListener("click", (event) => {
+    event.preventDefault();
+    p1.name = p1Name.value;
+    p2.name = p2Name.value;
+    game = gamePieces.gameBoard();
+    p1Display.textContent = p1.name + "'s score: ";
+    p2Display.textContent = p2.name + "'s score: ";
+    dialog.close();
+}) // to be continued...
