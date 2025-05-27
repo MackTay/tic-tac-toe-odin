@@ -50,9 +50,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --color1: blue;
-  --color2: yellow;
-  --color3: red;
+  --color1: #ff42c8;
+  --color2: #9b63f3;
+  --color3: #ee8728;
 }
 
 .big-container {
@@ -67,11 +67,13 @@ h1, h2, h3, h4, h5, h6 {
 .left-div {
   grid-row: 1 / 6;
   grid-column: 1 / 2;
+  background: linear-gradient(to right, var(--color1), var(--color3), white);
 }
 
 .right-div {
   grid-row: 1 / 6;
   grid-column: 3 / 4;
+  background: linear-gradient(to left, var(--color1), var(--color3), white);
 }
 
 .title {
