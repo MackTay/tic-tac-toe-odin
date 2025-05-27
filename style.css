@@ -11,6 +11,7 @@
 
 * {
   margin: 0;
+  font-family: "RD", "Verdana", "Sans Serif";
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -60,6 +61,10 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
+.title > H1 {
+  font-family: "Kablammo";
+}
+
 .tiles-container {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -93,3 +98,10 @@ button:active {
     background-color: var(--color3);
 }
 
+.footer {
+  text-align: center;
+}
+
+.player-scores {
+  text-align: center;
+}
