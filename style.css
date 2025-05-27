@@ -110,3 +110,7 @@ button:active {
 .player-scores {
   text-align: center;
 }
+
+dialog {
+  margin: auto;
+}
