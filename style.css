@@ -84,6 +84,30 @@ h1, h2, h3, h4, h5, h6 {
   height: 100px;
 }
 
+#tile0,
+#tile1,
+#tile2 {
+  border-top: none;
+}
+
+#tile6,
+#tile7,
+#tile8 {
+  border-bottom: none;
+}
+
+#tile0,
+#tile3,
+#tile6 {
+  border-left: none;
+}
+
+#tile2,
+#tile5,
+#tile8 {
+  border-right: none;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
